@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <!-- <link rel="shortcut icon" href="img/favicon_1.ico"> -->
+
+    <title>Fitness Evaluator</title>
+
+    <!-- Google-Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600,700,900,400italic'
+          rel='stylesheet'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+
+    <!--Animation css-->
+    <link href="css/animate.css" rel="stylesheet">
+    <style> .highcharts-container {
+            width: 100% !important;
+            height: 100% !important;
+        }</style>
+
+
+    <!--Icon-fonts css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="assets/ionicon/css/ionicons.min.css" rel="stylesheet"/>
+
+    <!-- sweet alerts -->
+    <link href="assets/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/helper.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet"/>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+<!-- Aside Start-->
+<div>
+        <!-- Aside Ends-->
+        <div class="logo" style="background-color: #ADD8E6; width: 14%;float: left">
+                <a href="/" class="logo-expanded">
+                    <img src="img/man.gif" alt="logo" style="margin-left: 45px; width: 80px; "></br>
+                    <span class="nav-label" style="font-size: 18px; margin-left: 6px;">Fitness Evaluator</span>
+                </a>
+            </div>
+
+        <!--Main Content Start -->
+        <section class="content" style="width: 86%;">
+
+            <!-- Header -->
+            <header class="top-head container-fluid" style="background-color: #7FFFD4;height: 70px">
+
+                <ul class="list-inline navbar-left top-menu top-right-menu">
+                    <li class="has-submenu active"><a href="/"><i></i> <span class="nav-label">Dashboard</span></a>
+                       <!--  <ul class="list-unstyled"> -->
+                            <li class="has-submenu active"><a href="calories">Calories</a></li>
+                            <li><a href="sleep">Sleeping Patterns</a></li>
+                            <li><a href="activities">Activity</a></li>
+                            <li><a href="heart">Heart</a></li>
+                            <li><a href="food">Food</a></li>
+                       <!--  </ul> -->
+                    </li>
+                </ul>
+
+
+                <!-- Right navbar -->
+                <ul class="list-inline navbar-right top-menu top-right-menu">
+                    <!-- Notification -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge badge-sm up bg-pink count">3</span>
+                        </a>
+                        <ul class="dropdown-menu extended fadeInUp animated nicescroll" tabindex="5002">
+                            <li class="noti-header">
+                                <p>Notifications</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="pull-left"><i class="fa fa-user-plus fa-2x text-info"></i></span>
+                                    <span>New user registered<br><small class="text-muted">5 minutes ago</small></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="pull-left"><i class="fa fa-diamond fa-2x text-primary"></i></span>
+                                    <span>Use animate.css<br><small class="text-muted">5 minutes ago</small></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="pull-left"><i class="fa fa-bell-o fa-2x text-danger"></i></span>
+                                    <span>Send project demo files to client<br><small class="text-muted">1 hour ago</small></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <p><a href="#" class="text-right">See all notifications</a></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- /Notification -->
+
+                    <!-- user login dropdown start-->
+                    <li class="dropdown text-center">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" src="img/avatar-2.jpg" class="img-circle profile-img thumb-sm">
+                            <span class="username"><%-name%> </span> <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu extended pro-menu fadeInUp animated" tabindex="5003" style="overflow: hidden; outline: none;">
+                            <li><a href="profile"><i class="fa fa-briefcase"></i>Profile</a></li>
+                            <li><a href="emergencyContacts"><i class="fa fa-bell"></i> Emergency Contacts</a></li>
+                            <li><a href="logout"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- End right navbar -->
+            </header>
+            <!-- Header Ends -->
+</section>
+</div>
+    <!-- Header Ends -->
+
+
+    <!-- Page Content Start -->
+    <!-- ================== -->
+    <div class="wraper container-fluid">
+
+        <div class="row">
+            <div>
+                <!--<div class="portlet">&lt;!&ndash; /primary heading &ndash;&gt;-->
+
+                <div class="portlet-heading">
+                    <h3 class="portlet-title text-dark text-uppercase" style="text-align: center"
+                        aria-describedby="info">Calorie Statistics</h3>
+                    <p id="info" style="text-align:center" class="text-muted">The calorie statistics are from date
+                        <b><%= startDate %></b> to <b><%= endDate %></b>.</p>
+
+                </div>
+
+            </div>
+
+
+            <!--</div> &lt;!&ndash; end portlet-widgets &ndash;&gt;-->
+            <!--</div> &lt;!&ndash; end porlet &ndash;&gt;-->
+        </div> <!-- end row -->
+
+        <div class="row">
+
+            <div class="col-lg-6">
+                <div id="calorieComparison" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 -10px"></div>
+            </div>
+
+            <div class="col-lg-6">
+                <div id="weightChange" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 -10px"></div>
+            </div>
+
+
+        </div> <!-- end row -->
+
+    </div>
+    <!-- Page Content Ends -->
+    <!-- ================== -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        2017 © Fitness 
+        Evaluator
+    </footer>
+    <!-- Footer Ends -->
+
+
+</section>
+<!-- Main Content Ends -->
+
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/pace.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="assets/chat/moment-2.2.1.js"></script>
+
+<!-- Counter-up -->
+<script src="js/waypoints.min.js" type="text/javascript"></script>
+<script src="js/jquery.counterup.min.js" type="text/javascript"></script>
+
+<!-- EASY PIE CHART JS -->
+<script src="assets/easypie-chart/easypiechart.min.js"></script>
+<script src="assets/easypie-chart/jquery.easypiechart.min.js"></script>
+<script src="assets/easypie-chart/example.js"></script>
+
+
+<!--Flot Chart-->
+<script src="assets/flot-chart/jquery.flot.js"></script>
+<script src="assets/flot-chart/jquery.flot.time.js"></script>
+<script src="assets/flot-chart/jquery.flot.tooltip.min.js"></script>
+<script src="assets/flot-chart/jquery.flot.resize.js"></script>
+<script src="assets/flot-chart/jquery.flot.pie.js"></script>
+<script src="assets/flot-chart/jquery.flot.selection.js"></script>
+<script src="assets/flot-chart/jquery.flot.stack.js"></script>
+<script src="assets/flot-chart/jquery.flot.crosshair.js"></script>
+<script src="assets/flot-chart/jquery.flot.init.js"></script>
+
+
+<!-- sparkline -->
+<script src="assets/sparkline-chart/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="assets/sparkline-chart/chart-sparkline.js" type="text/javascript"></script>
+
+<!-- sweet alerts -->
+<script src="assets/sweet-alert/sweet-alert.min.js"></script>
+<script src="assets/sweet-alert/sweet-alert.init.js"></script>
+
+<script src="js/jquery.app.js"></script>
+
+<!-- Dashboard -->
+<script src="js/jquery.dashboard.js"></script>
+
+<!-- Todo -->
+<script src="js/jquery.todo.js"></script>
+
+<!--Chart resources-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+<script src="js/Charts/guage-chart.js"></script>
+
+
+<!--chart for steps-->
+
+
+<!--chart for distance-->
+
+<!--chart for calories out-->
+
+<!--chart for sleep-->
+
+
+<script type="text/javascript">
+    /* ==============================================
+     Counter Up
+     =============================================== */
+    jQuery(document).ready(function ($) {
+        $('.counter').counterUp({
+            delay: 100,
+            time: 1200
+        });
+    });
+</script>
+
+<script>
+    Highcharts.chart('calorieComparison', {
+
+        chart: {
+            type: 'column'
+        },
+
+        title: {
+            text: 'Calories In VS. Calories Out'
+        },
+
+        xAxis: {
+            type: 'category'
+        },
+
+        yAxis: {
+            allowDecimals: false,
+            min: 0,
+            title: {
+                text: 'Number of calories'
+            }
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.name + ': ' + this.y + '</b><br/>'
+
+            }
+        },
+
+        plotOptions: {},
+
+        series: [{
+            name: 'Calories',
+            colorByPoint: true,
+            data: [{
+                name: 'Calories In',
+                y:  <%- totalCaloriesIn.today %>,
+                drilldown: null
+            }, {
+                name: 'Calories Out',
+                y: <%- totalCaloriesOut %>,
+                drilldown: 'Calories Out'
+            }]
+        }],
+
+        drilldown: {
+            series: [{
+                name: 'Calories Out',
+                id: 'Calories Out',
+                data: [
+                    [
+                        "<%- calories[0].dateTime %>",
+                        <%- calories[0].value %>
+                    ],
+                    [
+                        "<%- calories[1].dateTime %>",
+                        <%- calories[1].value %>
+                    ],
+                    [
+                        "<%- calories[2].dateTime %>",
+                        <%- calories[2].value %>
+                    ],
+                    [
+                        "<%- calories[3].dateTime %>",
+                        <%- calories[3].value %>
+                    ],
+                    [
+                        "<%- calories[4].dateTime %>",
+                        <%- calories[4].value %>
+                    ],
+                    [
+                        "<%- calories[5].dateTime %>",
+                        <%- calories[5].value %>
+                    ],
+                    [
+                        "<%- calories[6].dateTime %>",
+                        <%- calories[6].value %>
+                    ]
+
+                ]
+            }]
+        }
+
+    });
+</script>
+
+<script>
+
+    var data = <%- JSON.stringify(weightArray) %>;
+
+    var weightDates= <%- JSON.stringify(weightDateArray) %>;
+
+    Highcharts.chart('weightChange', {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Weight Change'
+        },
+
+        subtitle: {
+            text: 'Total Change this week: '+ <%-weightChange%> +' lb(s)'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        xAxis: {
+            categories: weightDates
+        },
+        yAxis: {
+            title: {
+                text: 'Weight'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value + 'lb';
+                }
+            }
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Weight change from ' + <%= startDate %>+'to' + <%= endDate %>,
+            marker: {
+                symbol: 'square'
+            },
+            data: data
+
+        }]
+    });
+</script>
+
+
+</body>
+</html>

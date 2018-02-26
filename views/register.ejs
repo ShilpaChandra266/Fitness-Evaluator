@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fitness Evaluator</title>
+
+    <!-- Google-Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600,700,900,400italic' rel='stylesheet'>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+
+    <!--Animation css-->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!--Icon-fonts css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
+
+    <!--Form Wizard-->
+    <link rel="stylesheet" type="text/css" href="assets/form-wizard/jquery.steps.css" />
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/helper.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+     <script src="js/respond.min.js"></script>
+          <script src="https://code.angularjs.org/1.5.7/angular.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <![endif]-->
+
+    <script src="https://code.angularjs.org/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+
+    <link href="../bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+    <script src="../bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+
+
+    <script src="js/ngApp.js"></script>
+
+    <script src="js/Controllers/ProfileController.js"></script>
+
+</head>
+
+
+<body ng-app="SmartHealthTracker" ng-controller="ProfileController" background="img/back.jpg" style="background-repeat: no-repeat;color: grey; background-size: cover";>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Register for Fitness Evaluator</h3>
+            </div>
+            <div class="panel-body">
+                <form id="wizard-validation-form" ng-submit="register()" method="post">
+                    <div>
+                        <h3>Step 1</h3>
+                        <section>
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label " for="email2">Email *</label>
+                                <div class="col-lg-10">
+                                    <input id="email2" ng-model="email" name="email" type="text" class="required email form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label " for="password"> Password *</label>
+                                <div class="col-lg-10">
+                                    <input id="password" ng-model="password"name="password" type="password" class="required password form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label " for="confirm_password">Confirm Password *</label>
+                                <div class="col-lg-10">
+                                    <input id="confirm_password" ng-model="confirm_password" name="confirm_password" type="password" class="required confirm_password form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group clearfix">
+                                <label class="col-lg-12 control-label ">(*) Mandatory</label>
+                            </div>
+                        </section>
+                        <h3>Step 2</h3>
+                        <section>
+
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label" for="name2"> First name *</label>
+                                <div class="col-lg-10">
+                                    <input id="name2" ng-model="firstname"name="name" type="text" class="required form-control">
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label " for="surname2"> Last name *</label>
+                                <div class="col-lg-10">
+                                    <input id="surname2" ng-model="lastname" name="lastname" type="text" class="required form-control">
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label " for="phonenumber2">Phone Number </label>
+                                <div class="col-lg-10">
+                                    <input id="phonenumber2" ng-model="phonenumber" name="phonenumber" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label " for="height2">Height </label>
+                                <div class="col-lg-10">
+                                    <input id="height2" ng-model="height" name="height" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label " for="weight2">Weight </label>
+                                <div class="col-lg-10">
+                                    <input id="weight2" ng-model="weight" name="weight" type="number" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label " for="gender2">Gender </label>
+                                <select ng-model="gender" id="gender2" name="gender" form="wizard-validation-form">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group clearfix">
+                                <label class="col-lg-12 control-label ">(*) Mandatory</label>
+                            </div>
+
+                        </section>
+                        <h3>Step Final</h3>
+                        <section>
+                            <div class="form-group clearfix">
+                                <div class="col-lg-12">
+                                    <input id="acceptTerms-2" name="acceptTerms2" type="checkbox" class="required">
+                                    <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+                </form>
+            </div>  <!-- End panel-body -->
+        </div> <!-- End panel -->
+
+    </div> <!-- end col -->
+
+</div>
+
+
+
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/pace.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+
+<!--Form Validation-->
+<script src="assets/form-wizard/bootstrap-validator.min.js" type="text/javascript"></script>
+
+
+<!--Form Wizard-->
+<script src="assets/form-wizard/jquery.steps.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/jquery.validate/jquery.validate.min.js"></script>
+<script src="assets/jquery.validate/form-validation-init.js"></script>
+
+
+
+<!--wizard initialization-->
+<script src="assets/form-wizard/wizard-init.js" type="text/javascript"></script>
+
+
+<script src="js/jquery.app.js"></script>
+
+
+</body>
+</html>

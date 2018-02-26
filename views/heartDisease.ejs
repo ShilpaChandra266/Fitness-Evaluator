@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+        <meta name="author" content="Coderthemes">
+
+        <link rel="shortcut icon" href="img/favicon_1.ico">
+
+        <title>Fitness Evaluator</title>
+
+        <!-- Google-Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600,700,900,400italic' rel='stylesheet'>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-reset.css" rel="stylesheet">
+
+        <!--Animation css-->
+        <link href="css/animate.css" rel="stylesheet">
+<style> .highcharts-container {
+        width:100% !important;
+        height:100% !important;
+    }</style>
+
+
+        <!--Icon-fonts css-->
+        <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href="assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
+
+        <!-- sweet alerts -->
+        <link href="assets/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/helper.css" rel="stylesheet">
+        <link href="css/style-responsive.css" rel="stylesheet" />
+
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+           <script src="js/respond.min.js"></script>
+          <script src="https://code.angularjs.org/1.5.7/angular.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+        <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+        <script src="js/Controllers/HeartDiseaseController.js"></script>
+
+    </head>
+
+
+    <body ng-app="SmartHealthTracker" ng-controller="HeartDiseaseController">
+
+        <!-- Aside Start-->
+        <aside class="left-panel">
+
+            <!-- brand -->
+            <div class="logo">
+                <a href="/" class="logo-expanded">
+                    <img src="img/man.gif" alt="logo" style="margin-left: 45px; width: 80px;"></br>
+                    <span class="nav-label" style="font-size: 18px; margin-left: 6px;">Fitness Evaluator</span>
+                </a>
+            </div>
+            <!-- / brand -->
+
+            <!-- Navbar Start -->
+            <nav class="navigation">
+                <ul class="list-unstyled">
+                    <li class="has-submenu active"><a href="http://localhost:3000/"><i class="ion-home"></i> <span class="nav-label">Dashboard</span></a>
+                        <ul class="list-unstyled">
+                            <li><a href="calories">Calories</a></li>
+                            <li><a href="sleep">Sleeping Patterns</a></li>
+                            <li><a href="activities">Activity</a></li>
+                            <li><a href="heart">Heart</a></li>
+                            <li><a href="food">Food</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu"><a href="#"><i class="ion-flask"></i> <span class="nav-label">Disease Predictions</span></a>
+                        <ul class="list-unstyled">
+                            <li><a href="heartDisease">Heart Disease Predictor</a></li>
+                             <li><a href="diabetes">Diabetes Predictor</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </aside>
+        <!-- Aside Ends-->
+
+
+        <!--Main Content Start -->
+        <section class="content">
+
+            <!-- Header -->
+            <header class="top-head container-fluid">
+
+
+                <!-- Right navbar -->
+                <ul class="list-inline navbar-right top-menu top-right-menu">
+                    <!-- Notification -->
+                    <!-- /Notification -->
+
+                    <!-- user login dropdown start-->
+                    <li class="dropdown text-center">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" src="img/avatar-2.jpg" class="img-circle profile-img thumb-sm">
+                            <span class="username"><%-name%> </span> <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu extended pro-menu fadeInUp animated" tabindex="5003" style="overflow: hidden; outline: none;">
+                            <li><a href="/profile"><i class="fa fa-briefcase"></i>Profile</a></li>
+                            <li><a href="/preferences"><i class="fa fa-cog"></i> Preferences</a></li>
+                            <li><a href="/emergencyContacts"><i class="fa fa-bell"></i> Emergency Contacts</a></li>
+                            <li><a href="/logout"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- End right navbar -->
+
+            </header>
+            <!-- Header Ends -->
+
+
+            <!-- Page Content Start -->
+            <!-- ================== -->
+
+<div class="wraper container-fluid">
+    <div class="row">
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-10">
+            <h3><strong>Enter Details to Predict Heart Disease</strong></h3>
+    <!-- <div class="container"> -->
+        <form>
+            <div class="form-group">
+                <label>Age</label>
+                <input type="text" name="age" class="form-control input-lg" id="age" placeholder="Eg:34" ng-model="age" required>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <select class="form-control input-lg" id="chestpaintype" ng-model="sex">
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="chestpaintype">Chest Pain Type</label>
+                <select class="form-control input-lg" id="chestpaintype" ng-model="cp">
+                        <option value="1">Typical Angina</option>
+                        <option value="2">Atypical Angina</option>
+                        <option value="3">non-aginal pain</option>
+                        <option value="4">asymptotic</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label>Resting Blood Pressure(in mm Hg)</label>
+                <input type="text" name="restingbloodpressure" class="form-control input-lg" id="restingbloodpressure" placeholder="Eg:140" 
+                ng-model="trestbps" required>
+            </div>
+            <div class="form-group">
+                <label>Serum Cholestrol(in mg/dl)</label>
+                <input type="text" name="serumcholestrol" ng-model="chol" class="form-control input-lg" id="serumcholestrol" 
+                placeholder="Eg:229" required>
+            </div>
+            <div class="form-group">
+                <label>Fasting Blood Sugar(in mg/dl)</label>
+                <input type="text" name="blo" ng-model="fbs" class="form-control input-lg" id="serumcholestrol" placeholder="Eg:125" required>
+            </div>
+            <div class="form-group">
+                <label for="chestpaintype">ECG</label>
+                <select class="form-control input-lg" id="chestpaintype" ng-model="restecg">
+                        <option value="0">Normal</option>
+                        <option value="2">Abnormal</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label>Maximum Heart Rate Achieved</label>
+                <input type="text" ng-model="thalach" name="maxheartrate" class="form-control input-lg" id="maxheartrate" 
+                placeholder="Eg:109" required>
+            </div>
+            <div class="form-group">
+                <label>Exercise Induced Angina</label>
+                <select class="form-control input-lg" id="exerciseAngina" ng-model="exang">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label>ST depression induced by exercise relative to rest</label>
+                <input type="text" name="stdepression" class="form-control input-lg" id="stdepression" ng-model="oldpeak" 
+                placeholder="Eg:2.3"required>
+            </div>
+            <div class="form-group">
+                <label>Slope of the peak exercise ST segment</label>
+                <select class="form-control input-lg" id="exerciseAngina" ng-model="slope">
+                        <option value="1">Upsloping</option>
+                        <option value="2">Flat</option>
+                        <option value="3">Downsloping</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label>Number of major vessels colored by flourosopy</label>
+                <select class="form-control input-lg" id="exerciseAngina" ng-model="ca">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label>Thalassemia </label>
+                <select class="form-control input-lg" id="exerciseAngina" ng-model="thal">
+                        <option value="3">Normal</option>
+                        <option value="6">Fixed Defect</option>
+                        <option value="7">Reversible Defect</option>
+                    </select>
+            </div>
+            <input type="button" class="btn btn-info btn-lg" ng-click = "getPrediction()" value="Get Prediction">
+        </form>
+    <!-- </div> -->
+        </div>
+    </div>
+    
+
+</div>
+
+            
+            <!-- Page Content Ends -->
+            <!-- ================== -->
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                2017 © Smart Health Tracker
+            </footer>
+            <!-- Footer Ends -->
+
+
+
+        </section>
+        <!-- Main Content Ends -->
+
+        <script type="text/javascript">
+            function success(){
+                swal("Our Prediction", "There is a chance of getting Heart Disease", "error")
+
+            }
+        </script>
+
+
+
+        <!-- js placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/modernizr.min.js"></script>
+        <script src="js/pace.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+        <script src="assets/chat/moment-2.2.1.js"></script>
+        <script src="js/bootstrap-waitingfor.js"></script>
+
+        <!-- Counter-up -->
+        <script src="js/waypoints.min.js" type="text/javascript"></script>
+        <script src="js/jquery.counterup.min.js" type="text/javascript"></script>
+
+        <!-- sweet alerts -->
+        <script src="assets/sweet-alert/sweet-alert.min.js"></script>
+        <script src="assets/sweet-alert/sweet-alert.init.js"></script>
+
+        <script src="js/jquery.app.js"></script>
+
+
+        <!-- Todo -->
+        <script src="js/jquery.todo.js"></script>
+
+        <!--Chart resources-->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+        <script src="js/Charts/guage-chart.js"></script>
+    </body>
+</html>
