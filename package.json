@@ -20,7 +20,7 @@
     "express-session": "^1.15.6",
     "fitbit-node": "^2.0.5",
     "http": "0.0.0",
-    "moment": "^2.18.1",
+    "moment": ~> 2.19.3,
     "morgan": "~1.7.0",
     "node-mysql": "^0.4.2",
     "node-schedule": "^1.2.1",
